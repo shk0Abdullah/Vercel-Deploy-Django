@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block body %}
+<div class = "m-3 p-1">
+    <header class="text-center">
+        <h2>About Us</h2>
+    </header>
+    <main class= "m-2 p-1">
+        <section>
+            <h2>What is Transpo?</h2>
+            <p>Transpo is a powerful language translation tool that enables seamless communication across different languages. Built with Python and advanced translation APIs, Transpo can translate text from any language to any other language quickly and accurately.</p>
+        </section>
+
+        <section>
+            <h2>How Does It Work?</h2>
+            <p>Transpo leverages sophisticated APIs like Google Translate or DeepL to provide high-quality translations. By processing user inputs and sending them to these APIs, Transpo delivers instant translations, allowing users to break language barriers with ease.</p>
+            <p>Simply enter the text you want to translate, select the target language, and Transpo will handle the rest. Our application is designed to be user-friendly and efficient, supporting multiple languages and dialects.</p>
+        </section>
+
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>Translate between over 100 languages</li>
+                <li>Instant and accurate translations powered by reliable APIs</li>
+                <li>Easy-to-use interface</li>
+                <li>Support for both text and speech translation (if applicable)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Technologies Used</h2>
+            <p>Transpo is built with Python and uses various libraries and APIs for language processing and translation. Key technologies include:</p>
+            <ul>
+                <li><strong>Python:</strong> The core programming language powering the application</li>
+                <li><strong>APIs:</strong> Google Translate API, DeepL API, or other translation services</li>
+                <li><strong>Web Framework:</strong> Django or Flask (depending on the setup)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Why Choose Transpo?</h2>
+            <p>Whether you're traveling, studying, or just curious about different languages, Transpo is designed to make translation easy and accessible. With support for various languages and a focus on accuracy, Transpo helps users communicate effectively in any language.</p>
+        </section>
+
+        <section>
+            <h2>Get Started</h2>
+            <p>Ready to break the language barrier? <a href="{% url 'index' %}">Try Transpo now</a> and experience seamless translation in just a few clicks!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Transpo. All rights reserved.</p>
+    </footer>
+
+</div>
+{% endblock body %}

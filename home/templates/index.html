@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h1 class="my-5 container-fluid" style="text-align: center;">Language Translator</h1>
+
+    <div class="mb-1 mx-5">
+        <form method="POST" action="{% url 'index' %}">
+            {% csrf_token %}
+            <label for="text" class="form-label"><strong>Text:</strong></label>
+            <textarea name="text" class="form-control" rows="9" placeholder="Enter the text you want to translate"></textarea>
+            
+            <div class="mb-3 mx-3 my-3">
+                <label for="language" class="form-label"><strong>In Which Language Do You Want to Translate?</strong></label>
+                <select name="language" class="form-select form-control" id="language">
+                    <option>Select</option>
+                    {% for language in languages%}
+                        <option name="categories">{{ language }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <button type="submit" class="btn btn-primary mb-3">Translate</button>
+        </form>
+
+        {% comment %} 
+        <div>
+            <label for="translated" class="form-label"><strong>Translated Text:</strong></label>
+            <textarea name="translated" class="form-control" rows="12" placeholder="Translated text will be shown here">{{ translate }}</textarea>
+        </div> 
+        {% endcomment %}
+    </div>
+{% endblock %}

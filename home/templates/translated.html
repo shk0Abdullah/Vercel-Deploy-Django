@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block body %}
+<h1 class="my-5 container-fluid" style="text-align: center;">{{lang_trans}}</h1>
+<div class="mb-1 mx-5">
+    <label for="exampleInputPassword1" class="form-label"><strong>Translated Text:</strong></label>
+    <textarea name="translated" class="form-control" rows="12" placeholder="Translated text will be shown here">{{ translate }}</textarea>
+</div>
+<form action="{% url 'index' %}">
+    {% csrf_token %}
+    <div class="d-flex justify-content-end mt-3 mx-5" style="margin-bottom: 100px;">
+        <button type="submit" class="btn-primary btn" style="margin-bottom: 100px;"><strong>{{translate_more}}</strong></button>
+    </div>
+</form>
+{% endblock body %}

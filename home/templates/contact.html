@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form>
+  {% csrf_token %}
+  <center class="m-3 p-2"><h1>Contact Us</h1></center>
+  <div class="m-1 p-2">
+    <div>
+    <label for="exampleInputEmail1" class="form-label"><strong>Email address:</strong></label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  <label for="message" class="form-label"><strong>Message:</strong></label>
+  <textarea name="message" rows="8" cols="70" class="form-control">
+    Enter your Message
+  </textarea>
+  </div>
+  <div class= "ml-5 pt-3">
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+</div>
+{% endblock body %}
