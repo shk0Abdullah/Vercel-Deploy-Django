@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "manage.py",
+        "use": "vercel-python"
+      },
+      {
+        "src": "translator/wsgi.py",
+        "use": "vercel-python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "translator/wsgi.py"
+      }
+    ]
+  }
